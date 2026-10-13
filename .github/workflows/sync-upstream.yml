@@ -1,10 +1,10 @@
 name: Sync upstream
 
+# Schedule paused: GITHUB_TOKEN cannot import upstream workflow changes.
+# Manual runs need an authentication solution before full sync can succeed.
 # Keep this workflow on the default branch. It merges upstream changes,
 # preserves fork-only commits, and fails instead of overwriting conflicts.
 on:
-  schedule:
-    - cron: "37 */6 * * *"
   workflow_dispatch:
 
 permissions:
